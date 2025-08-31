@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chess</title>
+    <title>Wild Chess</title>
 </head>
 <body>
-    <h1>Chess</h1>
-    <p>Coming soon: Play Chess!</p>
+    <h1>Chess with Wild Squares!</h1>
+    <p>Wild squares: {{ wild_squares|join(', ') }}</p>
+    <p>Effects: {{ effects|join(', ') }}</p>
+    {% if surprise %}
+    <p><b>Surprise Mode: Pawns become queens for 1 turn!</b></p>
+    {% endif %}
     <a href="{{ url_for('index') }}">Back to Game Hub</a>
 </body>
 </html>
