@@ -4,8 +4,10 @@
     <title>Game Hub</title>
 </head>
 <body>
-    <h1>Welcome to Game Hub</h1>
-    <p>Select a game:</p>
+    <h1>Welcome to the Unique Game Hub!</h1>
+    <form method="get" action="/surprise">
+        <button type="submit">Surprise Me!</button>
+    </form>
     <ul>
         <li><a href="{{ url_for('pingpong') }}">Ping Pong</a></li>
         <li><a href="{{ url_for('chess') }}">Chess</a></li>
