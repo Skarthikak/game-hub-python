@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ping Pong</title>
+    <title>Unique Ping Pong</title>
 </head>
 <body>
-    <h1>Ping Pong</h1>
-    <p>Coming soon: Play Ping Pong!</p>
+    <h1>Ping Pong with Power-Ups & Obstacles!</h1>
+    <p>Power-Ups: {{ powerups|join(', ') }}</p>
+    <p>Obstacles: {{ obstacles|join(', ') }}</p>
+    {% if surprise %}
+    <p><b>Surprise Mode: All paddles are invisible!</b></p>
+    {% endif %}
     <a href="{{ url_for('index') }}">Back to Game Hub</a>
 </body>
 </html>
